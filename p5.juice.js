@@ -13,7 +13,7 @@ class Juice{
 
         //note SFX
         this.monoSynth = new p5.MonoSynth();
-        // userStartAudio();
+        userStartAudio();
 
         //particles
         this.particleSettings = false;
@@ -25,10 +25,17 @@ class Juice{
         this.particlesY = 0
 
 
-        //screen Shake
+        //Screen Shake
         this.screenShakeX = 0
         this.screenShakeY = 0
         this.screenShakeDuration = 0
+
+        //path recorder
+        //maybe switch this to a vector later on?
+        this.pathArrayX = []
+        this.pathArrayY = []
+
+
 
         
     }
@@ -49,8 +56,10 @@ class Juice{
             this.incTweenStart = this.tweenStart
         }
 
+        let calc = this.incTweenStart += (this.tweenTarget - this.incTweenStart) * this.tweenSpeed 
+
         //utility for easing
-        return this.incTweenStart += (this.tweenTarget - this.incTweenStart) * this.tweenSpeed 
+        return calc
     }
 
     //Mouse Speed Section
@@ -108,6 +117,7 @@ class Juice{
 
     }
 
+
     particlesReset(){
 
                 //make sure the particles exist
@@ -124,9 +134,35 @@ class Juice{
 
     }
 
-    pathHistory(){
+    pathHistory(x,y,length,r,g,b,a,SW){
         // update the current position of an element's position to add it to the path history
         //second attribute specifys the length? or maybe this is just a variable?
+        this.pathArrayX.push(x)
+        this.pathArrayY.push(y)
+
+        if(this.pathArrayX.length > length){
+            this.pathArrayX.splice(0,1);
+            this.pathArrayY.splice(0,1);  
+        }
+
+        for(let i = 1 ; i < this.pathArrayX.length; i++){
+    
+            let mR = map(i,0,this.pathArrayX.length,0,r)
+            let mG = map(i,0,this.pathArrayX.length,0,g)
+            let mB = map(i,0,this.pathArrayX.length,0,b)
+            // let mA = map(i,0,this.pathArrayX.length,0,a)
+            let mSW = map(i,0,this.pathArrayX.length,0,SW)
+
+            push()
+                strokeWeight(mSW)
+                stroke(mR,mG,mG,a)
+                line(this.pathArrayX[i],this.pathArrayY[i],this.pathArrayX[i-1],this.pathArrayY[i-1])
+            pop()
+            
+        }
+
+
+
     }
 
     screenShake(shakeAmount){

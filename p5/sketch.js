@@ -1,71 +1,52 @@
 
-// // tween
 
-// let tween
+let path
+let tjx, tjy
+let note
+let notes = ["C","D","E","F"]
 
-// let xpos = 100
-
-
-// function setup() {
-//   // put setup code here
-//   createCanvas(600,600)
-
-//   tween = new Juice()
-
-// }
-
-// function draw() {
-//   // put drawing code here
-
-//   ellipse( xpos, height/2,20,20 )
-
-//   if(mouseIsPressed == true){
-//     xpos = tween.tween(100,500)
-//   }
-
-//   if(keyIsPressed == true){
-//     xpos = tween.tween(500,0)
-
-//   }
-
-
-
-
-//   ellipse()
-// }
-
-
-// Shake
-
-
-let juice
-let wiggle = 0
+let xpos = 200
+let ypos = 200
+let xTarget = 0
+let yTarget = 0 
 
 function setup() {
   // put setup code here
   createCanvas(600,600)
 
-  juice = new Juice()
+  path = new Juice()
+  tjx = new Juice()
+  tjy = new Juice()
+  note = new Juice()
+
+
 
 }
 
 function draw(){
   background(0);
-
-  if(mouseIsPressed === true){
-    juice.particles(200,100,10,5,10,255,50,100,255)
+  noStroke()
 
 
-    juice.screenShake(10)
- 
+  if(frameCount % (30*5) === 0){
+    console.log('go')
+    xTarget = random(width)
+    yTarget = random(height)
+    note.synthNote(notes[floor(random(notes.length))] + floor(random(2,5)), random(0.01,0.5))
+
+
   }
 
-  if(mouseIsPressed === false){
-    juice.particlesReset()
-  }
+  xpos = tjx.tween(0,100,0.5)
+  console.log(xpos)
+
+  ypos = tjy.tween(0,yTarget,0.5)
 
 
-  ellipse(width/2 + wiggle,height/2,20,20)
+  path.pathHistory(xpos,ypos, 20,255,255,255,255,40)
+
+
+  ellipse(xpos,ypos,40,40)
 
 
 }

@@ -178,7 +178,7 @@ class Juice{
 
         select('canvas').position(this.screenShakeX, this.screenShakeY);
 
-        console.log(shakeAmount, this.screenShakeX, this.screenShakeY)
+        // console.log(shakeAmount, this.screenShakeX, this.screenShakeY)
 
     }
 

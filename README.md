@@ -13,7 +13,7 @@ p5.juice builds on the efforts outlined in [Game Feel: A Game Designer's Guide t
 + 
 + 
 
-#### How to use a CDN hosted version of the p5.collide2D library
+#### How to use a CDN hosted version of the p5.juice library
 To include the library via a CDN, add the library's CDN link using a `<script>` tag inside the `index.html` file within your project. 
 ```html
 <!--
@@ -36,31 +36,22 @@ You'll need to include the core p5.js before using p5.collide2D.
 
 ## Table of Contents
 
-  + [collidePointPoint()](#collidepointpoint)
-  + [collidePointCircle()](#collidepointcircle)
-  + [collidePointEllipse()](#collidepointellipse)
-  + [collidePointRect()](#collidepointrect)
-  + [collidePointLine()](#collidepointline)
-  + [collidePointArc()](#collidepointarc)
-  + [collideRectRect()](#colliderectrect)
-  + [collideCircleCircle()](#collidecirclecircle)
-  + [collideRectCircle()](#colliderectcircle)
-  + [collideLineLine()](#collidelineline)
-  + [collideLineCircle()](#collidelinecircle)
-  + [collideLineRect()](#collidelinerect)
-  + [collidePointPoly()](#collidepointpoly)
-  + [collideCirclePoly()](#collidecirclepoly)
-  + [collideRectPoly()](#colliderectpoly)
-  + [collideLinePoly()](#collidelinepoly)
-  + [collidePolyPoly()](#collidepolypoly)
-  + [collidePointTriangle()](#collidepointtriangle)
-  + [collide 2D primitive triangle](#collide-2d-primitive-triangle)
+  + [Juice()](#collidepointpoint)
+  + [tween()](#collidepointcircle)
+  + [mouseSpeedX()](#collidepointellipse)
+  + [mouseSpeedY()](#collidepointrect)
+  + [sfx()](#collidepointline)
+  + [synthNote()](#collidepointarc)
+  + [particles()](#colliderectrect)
+  + [particlesReset()](#collidecirclecircle)
+  + [pathHistory()](#colliderectcircle)
+  + [screenShake()](#collidelineline)
 
 ## p5.juice Examples & Documentation
 
 
 #### Juice() object
-###### let feel new Juice()
+###### let feel = new Juice()
 invoke the core Juice object
 
 [Live example]()

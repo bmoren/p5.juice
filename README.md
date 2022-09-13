@@ -2,7 +2,7 @@
 
 #### a library for adding juice and effects to p5.js sketches and games
 
-p5.juice builds on the efforts outlined in [Game Feel: A Game Designer's Guide to Virtual Sensation](https://bookshop.org/books/game-feel-a-game-designer-s-guide-to-virtual-sensation/9781138403253) written by Steve Swink and the 2012 talk [Juice it or Lose it!]](https://www.youtube.com/watch?v=Fy0aCDmgnxg) by Martin Jonasson & Petri Purho
+p5.juice builds on the efforts outlined in [Game Feel: A Game Designer's Guide to Virtual Sensation](https://bookshop.org/books/game-feel-a-game-designer-s-guide-to-virtual-sensation/9781138403253) written by Steve Swink and the 2012 talk [Juice it or Lose it!](https://www.youtube.com/watch?v=Fy0aCDmgnxg) by Martin Jonasson & Petri Purho
 
 
 ### Adding p5.juice to your project

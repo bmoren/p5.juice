@@ -9,16 +9,15 @@ p5.juice builds on the efforts outlined in [Game Feel: A Game Designer's Guide t
 [Download the latest release](https://github.com/bmoren/p5.juice/releases/)
 [How to add a library to your p5.js sketch](https://p5js.org/libraries/)
 
-#### CDN Links
-+ 
-+ 
+#### CDN Link
++ https://cdn.jsdelivr.net/gh/bmoren/p5.juice@master/p5.juice.js
 
 #### How to use a CDN hosted version of the p5.juice library
 To include the library via a CDN, add the library's CDN link using a `<script>` tag inside the `index.html` file within your project. 
 ```html
 <!--
 This enables the p5.js core library (automatically added within the p5.js web editor).
-You'll need to include the core p5.js before using p5.collide2D.
+You'll need to include the core p5.js before using p5.juice.
 -->
 <script defer src="https://unpkg.com/p5"></script>
 

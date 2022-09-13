@@ -22,30 +22,22 @@ You'll need to include the core p5.js before using p5.collide2D.
 -->
 <script defer src="https://unpkg.com/p5"></script>
 
-<!-- Includes the p5.collide2D addon library -->
-<script defer src="https://unpkg.com/p5.collide2d"></script>
+<!-- Includes the p5.juice addon library -->
+<script defer src="https://cdn.jsdelivr.net/gh/bmoren/p5.juice@master/p5.juice.js"></script>
 ```
-## Live Examples in the p5.js editor
-  <!-- + [Collection of all examples of collision functions](https://editor.p5js.org/p52dcollide/collections/taUUdSGhj)
-  + [Basic Usage](https://editor.p5js.org/p52dcollide/sketches/EKGWIHFYR)
-  + [Button with a callback](https://editor.p5js.org/p52dcollide/sketches/BjDVckvWE)
-  + [Object oriented collision](https://editor.p5js.org/p52dcollide/sketches/HOf1GOY4S)
-  + [Randomly placing objects without touching](https://editor.p5js.org/p52dcollide/sketches/WYb8vT3Mh)
-  + [Swords Game](https://editor.p5js.org/p52dcollide/sketches/DamkQQ2So) -->
-
 
 ## Table of Contents
 
-  + [Juice()](#collidepointpoint)
-  + [tween()](#collidepointcircle)
-  + [mouseSpeedX()](#collidepointellipse)
-  + [mouseSpeedY()](#collidepointrect)
-  + [sfx()](#collidepointline)
-  + [synthNote()](#collidepointarc)
-  + [particles()](#colliderectrect)
-  + [particlesReset()](#collidecirclecircle)
-  + [pathHistory()](#colliderectcircle)
-  + [screenShake()](#collidelineline)
+  + [Juice()](#juice-object)
+  + [tween()](#tween)
+  + [mouseSpeedX()](#mousespeedx)
+  + [mouseSpeedY()](#mousespeedy)
+  + [sfx()](#sfx)
+  + [synthNote()](#synthnote)
+  + [particles()](#particles)
+  + [particlesReset()](#particlesreset)
+  + [pathHistory()](#pathhistory)
+  + [screenShake()](#screenshake)
 
 ## p5.juice Examples & Documentation
 
